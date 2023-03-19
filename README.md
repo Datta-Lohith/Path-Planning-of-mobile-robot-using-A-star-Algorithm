@@ -7,7 +7,8 @@ Team project by Datta Lohith Gannavarapu and Kasturi Venkata Sai Sri Charan
 
 ## Contents of the repository 
 1. A_star_Datta Lohith_Sai Charan.py
-2. README.md
+2. Terminal Output.png
+3. README.md
 
 ## Dependencies
 - python 3.11.1
@@ -29,6 +30,9 @@ Team project by Datta Lohith Gannavarapu and Kasturi Venkata Sai Sri Charan
 
 ## Results
 Video output is generated showing the explored nodes and the optimal path calculated using A* Algorithm
+
+Terminal output-
+
 
 Video link - https://drive.google.com/file/d/1YYsd5L23HHuvoj4DyRpK6CBf8OdgFrb4/view?usp=share_link
 
