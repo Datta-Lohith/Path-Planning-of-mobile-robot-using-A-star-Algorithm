@@ -32,6 +32,7 @@ Team project by Datta Lohith Gannavarapu and Kasturi Venkata Sai Sri Charan
 Video output is generated showing the explored nodes and the optimal path calculated using A* Algorithm
 
 Terminal output-
+![Terminal Output](https://user-images.githubusercontent.com/126642779/226213502-eb5e90a2-420a-42fc-92f4-16bd03737838.png)
 
 
 Video link - https://drive.google.com/file/d/1YYsd5L23HHuvoj4DyRpK6CBf8OdgFrb4/view?usp=share_link
