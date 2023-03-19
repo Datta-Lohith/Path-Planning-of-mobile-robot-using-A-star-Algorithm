@@ -5,7 +5,7 @@ Team project by Datta Lohith Gannavarapu and Kasturi Venkata Sai Sri Charan
 
 # ENPM661: Planning for Autonomous Robots
 
-## Contents of the zip file
+## Contents of the repository 
 1. A_star_Datta Lohith_Sai Charan.py
 2. README.md
 
