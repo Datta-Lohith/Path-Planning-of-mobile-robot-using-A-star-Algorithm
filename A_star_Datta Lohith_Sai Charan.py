@@ -33,31 +33,45 @@ def create_map():
     # Draw obstacles on the maps with clearance
     for i in range(600):
         for j in range(250):
+            # Walls
             if i<10 or i>590 or j<10 or j>240:
                 map[j][i]=(222,228,203)
                 obs_map[j][i]=0
+            # Rectangles
             if ((j>=10 and j<=110) or (j>=140 and j<=240)) and (i>=90 and i<=160):
                 map[j][i]=(222,228,203)
                 obs_map[j][i]=0
+            # Hexagon
             if (85/2) * abs(i-300)/85 + 40 <= j <= 250 - (85/2) * abs(i-300)/85 - 40 and 225 <= i <= 375:
                 map[j][i]=(222,228,203)
                 obs_map[j][i]=0
+                
+            # Sides of the triangle for drawing clearance
+            if i==460 and j>=25 and j<=225:
+                map[j][i]=(222,228,203)
+                obs_map[j][i]=128
+            if j-2*i+895==0 and 460<=i<=510:
+                map[j][i]=(222,228,203)
+                obs_map[j][i]=128
+            if j+2*i-1145==0 and 460<=i<=510:
+                map[j][i]=(222,228,203)
+                obs_map[j][i]=128
             
     # Draw obstacles on the maps          
     for i in range(600):
         for j in range(250):
+            # Rectangles without clearance
             if ((j>=0 and j<=100) or (j>=150 and j<=250)) and (i>=100 and i<=150):
                 map[j][i]=(136, 131, 14)
-            if (200/100) * (i-460) + 25 <= j <= (-200/100) * (i-460) + 225 and 460 <= i <= 510:
+            # Triangle without clearance
+            if (200/100) * (i-460) + 25 < j < (-200/100) * (i-460) + 225 and 460 < i < 510:
                 map[j][i]=(136, 131, 14)
                 obs_map[j][i]=0
+            # Hexagon without clearance
             if (75/2) * abs(i-300)/75 + 50 <= j <= 250 - (75/2) * abs(i-300)/75 - 50 and 235 <= i <= 365:
                 map[j][i]=(136, 131, 14)
-
-    # Draw the clearance border around the triangle
-    cv.line(obs_map, (460, 25), (460, 225), (128, 128, 128), thickness=1)
-    cv.line(obs_map, (460, 225), (510, 125), (128, 128, 128), thickness=1)
-    cv.line(obs_map, (510, 125), (460, 25), (128, 128, 128), thickness=1)
+    
+    # Draw clearance on the maps for triangle
     for i in range(460,511):
         for j in range(25,226):
             if obs_map[j][i]==128:
@@ -67,10 +81,6 @@ def create_map():
                             obs_map[j+k][i+l]=0
                             map[j+k][i+l]=(222,228,203)
 
-    cv.line(obs_map, (460, 25), (460, 225), (0,0,0), thickness=1)
-    cv.line(obs_map, (460, 225), (510, 125), (0,0,0), thickness=1)
-    cv.line(obs_map, (510, 125), (460, 25), (0,0,0), thickness=1)   
-    
     
     # cv.imshow('Map',map)
     # cv.waitKey(0)   
