@@ -242,7 +242,7 @@ def get_inputs():
     while check_input:
         s_node=input("\nNote:'(10,10) is the starting point due to clearance on the walls and orientation should be multiple of 30 degrees'\nEnter the start node in the format 0 1 30 for (0,1,30): ")
         x,y,th=s_node.split()
-        if int(x)>600 or int(y)>250 or int(x)<-1 or int(y)<-1 or int(th)%30!=0:
+        if int(x)>600 or int(y)>250 or int(x)<0 or int(y)<0 or int(th)%30!=0:
             print("Please enter valid coordinates.")
         elif (int(x),int(y),int(th)) in nodes.keys():
             print("Please enter a valid start node(Node in obstacle place).")
@@ -255,7 +255,7 @@ def get_inputs():
     while check_input:
         f_node=input("\nNote:'(590,240) is the ending point due to clearance on the walls and orientation should be multiple of 30 degrees'\nEnter the end node in the format 0 1 30 for (0,1,30) : ")
         x,y,th=f_node.split()
-        if int(x)>600 or int(y)>250 or int(x)<-1 or int(y)<-1 or int(th)%30!=0 or (int(x),int(y))==start_node:
+        if int(x)>600 or int(y)>250 or int(x)<0 or int(y)<0 or int(th)%30!=0 or (int(x),int(y))==start_node:
             print("Please enter valid coordinates.")
         elif (int(x),int(y),int(th)) in nodes.keys():
             print("Please enter a valid end node(Node in obstacle place).")
