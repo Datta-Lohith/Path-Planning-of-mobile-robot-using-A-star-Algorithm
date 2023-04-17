@@ -38,3 +38,10 @@ Terminal output-
 Video link - https://drive.google.com/file/d/1YYsd5L23HHuvoj4DyRpK6CBf8OdgFrb4/view?usp=share_link
 
 Github link - https://github.com/Datta-Lohith/Path-Planning-of-mobile-robot-using-A-star-Algorithm
+
+```bash
+cd
+source 124
+```
+
+
